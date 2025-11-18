@@ -1,0 +1,48 @@
+[
+  {
+    "id": 1,
+    "titre": "Projet 1",
+    "desc": "Description courte du projet avec les technologies utilisées et les fonctionnalités principales.",
+    "detail": "Description détaillée du projet. Vous pouvez expliquer ici le contexte, les défis rencontrés, les solutions apportées, les fonctionnalités développées, etc. Cette section sera visible sur la page de détail du projet.",
+    "mainImg": "https://via.placeholder.com/800x600/6366f1/ffffff?text=Projet+1",
+    "autreImg": [
+      "https://via.placeholder.com/800x600/8b5cf6/ffffff?text=Image+1",
+      "https://via.placeholder.com/800x600/ec4899/ffffff?text=Image+2",
+      "https://via.placeholder.com/800x600/f59e0b/ffffff?text=Image+3"
+    ],
+    "technologies": ["React", "Node.js", "MongoDB"],
+    "lienProjet": "https://example.com",
+    "lienCode": "https://github.com/example"
+  },
+  {
+    "id": 2,
+    "titre": "Projet 2",
+    "desc": "Description courte du projet avec les technologies utilisées et les fonctionnalités principales.",
+    "detail": "Description détaillée du projet. Vous pouvez expliquer ici le contexte, les défis rencontrés, les solutions apportées, les fonctionnalités développées, etc. Cette section sera visible sur la page de détail du projet.",
+    "mainImg": "https://via.placeholder.com/800x600/8b5cf6/ffffff?text=Projet+2",
+    "autreImg": [
+      "https://via.placeholder.com/800x600/6366f1/ffffff?text=Image+1",
+      "https://via.placeholder.com/800x600/ec4899/ffffff?text=Image+2"
+    ],
+    "technologies": ["Vue.js", "Python", "PostgreSQL"],
+    "lienProjet": "https://example.com",
+    "lienCode": "https://github.com/example"
+  },
+  {
+    "id": 3,
+    "titre": "Projet 3",
+    "desc": "Description courte du projet avec les technologies utilisées et les fonctionnalités principales.",
+    "detail": "Description détaillée du projet. Vous pouvez expliquer ici le contexte, les défis rencontrés, les solutions apportées, les fonctionnalités développées, etc. Cette section sera visible sur la page de détail du projet.",
+    "mainImg": "https://via.placeholder.com/800x600/ec4899/ffffff?text=Projet+3",
+    "autreImg": [
+      "https://via.placeholder.com/800x600/6366f1/ffffff?text=Image+1",
+      "https://via.placeholder.com/800x600/8b5cf6/ffffff?text=Image+2",
+      "https://via.placeholder.com/800x600/f59e0b/ffffff?text=Image+3",
+      "https://via.placeholder.com/800x600/10b981/ffffff?text=Image+4"
+    ],
+    "technologies": ["React", "TypeScript", "Firebase"],
+    "lienProjet": "https://example.com",
+    "lienCode": "https://github.com/example"
+  }
+]
+

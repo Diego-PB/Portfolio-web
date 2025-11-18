@@ -1,0 +1,27 @@
+[
+  {
+    "date": "2024 - 2026",
+    "titre": "Alternance - Développeur Full Stack",
+    "entreprise": "Oria, Toulouse",
+    "description": "Developpement d'application et maintenance de outils internes en C#, Gestion Base de données SQL"
+  },
+  {
+    "date": "2023 -2026",
+    "titre": "Formation - BUT Informatique",
+    "entreprise": "IUT de Blagnac, Toulouse",
+    "description": "Description de votre formation, spécialités, projets réalisés, etc."
+  },
+  {
+    "date": "2020 - 2023",
+    "titre": "Bac Technologique - STI2D (SIN)",
+    "entreprise": "Lycée Saint-Joseph Lasalle, Toulouse",
+    "description": "Sciences Technologiques de l'Industrie et du Développement Durable, spécialité SIN (Sciences d'information et du numérique)"
+  },
+  {
+    "date": "2018",
+    "titre": "Baccalauréat Scientifique",
+    "entreprise": "Nom du lycée",
+    "description": "Spécialité Mathématiques et Sciences de l'Ingénieur"
+  }
+]
+
