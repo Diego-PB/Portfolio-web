@@ -9,7 +9,8 @@
     --bg-secondary: #f9fafb;
     --bg-dark: #111827;
     --border-color: #e5e7eb;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --competence-icon-bg: #e8e9f5;
+    --shadow-sm: 0 1px 2px 0 rgba(183, 145, 232, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
     --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
@@ -189,7 +190,8 @@ body {
 }
 
 .name {
-    display: block;
+    display: flex;
+    flex-direction: column;
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -197,6 +199,12 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+.name-first,
+.name-last {
+    display: block;
+    line-height: 1.1;
 }
 
 .role {
@@ -314,6 +322,23 @@ body {
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 1.5rem;
+}
+
+.a-propos-text strong {
+    color: var(--text-primary);
+}
+
+.text-accent {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.text-gradient {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
 }
 
 .a-propos-stats {
@@ -539,7 +564,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--competence-icon-bg);
     border-radius: 12px;
     padding: 0.5rem;
 }
