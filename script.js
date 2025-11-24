@@ -22,13 +22,13 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     if (currentScroll > 100) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -37,7 +37,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        
+
         if (target) {
             const offsetTop = target.offsetTop - 80;
             window.scrollTo({
@@ -105,7 +105,7 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        
+
         // Récupérer les valeurs du formulaire
         const formData = {
             name: document.getElementById('name').value,
@@ -113,13 +113,13 @@ if (contactForm) {
             subject: document.getElementById('subject').value,
             message: document.getElementById('message').value
         };
-        
+
         // Ici vous pouvez ajouter la logique pour envoyer l'email
         // Par exemple, utiliser un service comme EmailJS, Formspree, ou votre backend
-        
+
         // Pour l'instant, on affiche juste une alerte
         alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
-        
+
         // Réinitialiser le formulaire
         contactForm.reset();
     });
@@ -131,7 +131,7 @@ const navLinksArray = Array.from(navLinks);
 
 window.addEventListener('scroll', () => {
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
@@ -139,7 +139,7 @@ window.addEventListener('scroll', () => {
             current = section.getAttribute('id');
         }
     });
-    
+
     navLinksArray.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href') === `#${current}`) {
@@ -178,19 +178,19 @@ function showError(container, message) {
 async function loadTimeline() {
     const timeline = document.getElementById('timeline');
     if (!timeline) return;
-    
+
     try {
         const response = await fetch('parcours.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const parcours = await response.json();
-        
+
         if (!Array.isArray(parcours) || parcours.length === 0) {
             showError(timeline, 'Le fichier parcours.json est vide ou invalide.');
             return;
         }
-        
+
         timeline.innerHTML = parcours.map((item, index) => `
             <div class="timeline-item ${index % 2 === 0 ? 'left' : 'right'}">
                 <div class="timeline-content">
@@ -201,7 +201,7 @@ async function loadTimeline() {
                 </div>
             </div>
         `).join('');
-        
+
         // Observer les éléments de la timeline pour l'animation
         const timelineItems = document.querySelectorAll('.timeline-item');
         timelineItems.forEach((item, i) => {
@@ -222,19 +222,19 @@ async function loadTimeline() {
 async function loadCompetences() {
     const container = document.getElementById('competences-categories');
     if (!container) return;
-    
+
     try {
         const response = await fetch('competences.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const competences = await response.json();
-        
+
         if (!competences || Object.keys(competences).length === 0) {
             showError(container, 'Le fichier competences.json est vide ou invalide.');
             return;
         }
-        
+
         container.innerHTML = Object.entries(competences).map(([categorie, items]) => `
             <div class="competence-category">
                 <h3 class="competence-category-title">${categorie}</h3>
@@ -255,7 +255,7 @@ async function loadCompetences() {
                 </div>
             </div>
         `).join('');
-        
+
         // Observer les éléments de compétences pour l'animation
         const competenceItems = document.querySelectorAll('.competence-item');
         competenceItems.forEach((item, i) => {
@@ -276,19 +276,19 @@ async function loadCompetences() {
 async function loadProjets() {
     const grid = document.getElementById('projets-grid');
     if (!grid) return;
-    
+
     try {
         const response = await fetch('projets.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const projets = await response.json();
-        
+
         if (!Array.isArray(projets) || projets.length === 0) {
             showError(grid, 'Le fichier projets.json est vide ou invalide.');
             return;
         }
-        
+
         grid.innerHTML = projets.map(projet => `
             <div class="projet-card">
                 <div class="projet-image" style="background-image: url('${projet.mainImg}');">
@@ -306,7 +306,7 @@ async function loadProjets() {
                 </div>
             </div>
         `).join('');
-        
+
         // Observer les projets pour l'animation
         const projetCards = document.querySelectorAll('.projet-card');
         projetCards.forEach((card, i) => {
@@ -323,8 +323,116 @@ async function loadProjets() {
     }
 }
 
+// Charger les données statiques depuis data.json
+async function loadData() {
+    try {
+        const response = await fetch('data.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+
+        // Navbar
+        if (data.navbar) {
+            const logo = document.getElementById('nav-logo');
+            if (logo) logo.textContent = data.navbar.logo;
+
+            const navHome = document.getElementById('nav-home');
+            if (navHome) navHome.textContent = data.navbar.menu.home;
+
+            const navAbout = document.getElementById('nav-about');
+            if (navAbout) navAbout.textContent = data.navbar.menu.about;
+
+            const navSkills = document.getElementById('nav-skills');
+            if (navSkills) navSkills.textContent = data.navbar.menu.skills;
+
+            const navProjects = document.getElementById('nav-projects');
+            if (navProjects) navProjects.textContent = data.navbar.menu.projects;
+
+            const navContact = document.getElementById('nav-contact');
+            if (navContact) navContact.textContent = data.navbar.menu.contact;
+        }
+
+        // Home
+        if (data.home) {
+            const greeting = document.getElementById('home-greeting');
+            if (greeting) greeting.textContent = data.home.greeting;
+
+            const nameFirst = document.getElementById('home-name-first');
+            if (nameFirst) nameFirst.textContent = data.home.name.first;
+
+            const nameLast = document.getElementById('home-name-last');
+            if (nameLast) nameLast.textContent = data.home.name.last;
+
+            const role = document.getElementById('home-role');
+            if (role) role.textContent = data.home.role;
+
+            const desc = document.getElementById('home-desc');
+            if (desc) desc.textContent = data.home.description;
+
+            const btnProjects = document.getElementById('btn-projects');
+            if (btnProjects) btnProjects.textContent = data.home.buttons.projects;
+
+            const btnContact = document.getElementById('btn-contact');
+            if (btnContact) btnContact.textContent = data.home.buttons.contact;
+        }
+
+        // About
+        if (data.about) {
+            const title = document.getElementById('about-title');
+            if (title) title.textContent = data.about.title;
+
+            const aboutTextContainer = document.getElementById('about-text');
+            if (aboutTextContainer && Array.isArray(data.about.content)) {
+                aboutTextContainer.innerHTML = data.about.content.map(p => `<p>${p}</p>`).join('');
+            }
+        }
+
+        // Contact
+        if (data.contact) {
+            const title = document.getElementById('contact-title');
+            if (title) title.textContent = data.contact.title;
+
+            const subtitle = document.getElementById('contact-subtitle');
+            if (subtitle) subtitle.textContent = data.contact.subtitle;
+
+            const desc = document.getElementById('contact-desc');
+            if (desc) desc.textContent = data.contact.description;
+
+            const email = document.getElementById('contact-email');
+            if (email) email.textContent = data.contact.email;
+
+            const phone = document.getElementById('contact-phone');
+            if (phone) phone.textContent = data.contact.phone;
+
+            const location = document.getElementById('contact-location');
+            if (location) location.textContent = data.contact.location;
+
+            const linkedin = document.getElementById('social-linkedin');
+            if (linkedin && data.contact.socials.linkedin) {
+                linkedin.href = data.contact.socials.linkedin;
+            }
+
+            const github = document.getElementById('social-github');
+            if (github && data.contact.socials.github) {
+                github.href = data.contact.socials.github;
+            }
+        }
+
+        // Footer
+        if (data.footer) {
+            const copyright = document.getElementById('footer-copyright');
+            if (copyright) copyright.innerHTML = data.footer.copyright;
+        }
+
+    } catch (error) {
+        console.error('Erreur lors du chargement des données:', error);
+    }
+}
+
 // Charger toutes les données au chargement de la page
 document.addEventListener('DOMContentLoaded', () => {
+    loadData();
     loadTimeline();
     loadCompetences();
     loadProjets();

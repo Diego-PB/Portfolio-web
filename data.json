@@ -1,0 +1,51 @@
+{
+  "meta": {
+    "title": "Mon Portfolio",
+    "lang": "fr"
+  },
+  "navbar": {
+    "logo": "Diego PB",
+    "menu": {
+      "home": "Accueil",
+      "about": "À propos",
+      "skills": "Compétences",
+      "projects": "Projets",
+      "contact": "Contact"
+    }
+  },
+  "home": {
+    "greeting": "Bonjour, je suis",
+    "name": {
+      "first": "Diego",
+      "last": "Penicaud-Bernal"
+    },
+    "role": "Alternant Développeur Informatique",
+    "description": "Motivé par le développement logiciel et porté par l’envie de créer des solutions fiables, modernes et intuitives.",
+    "buttons": {
+      "projects": "Voir mes projets",
+      "contact": "Me contacter"
+    }
+  },
+  "about": {
+    "title": "À propos",
+    "content": [
+      "Motivé par le <strong>développement logiciel</strong> et porté par l’envie de créer des <span class=\"text-accent text-gradient\">solutions fiables, modernes et intuitives</span>, je conçois et développe des applications pensées pour être utiles, performantes et agréables à utiliser. J’aime transformer une idée en un produit concret, clair et fonctionnel, avec une attention particulière portée à <span class=\"text-accent text-gradient\">l’expérience utilisateur</span> et aux <span class=\"text-accent text-gradient\">détails graphiques</span>.",
+      "<span class=\"text-accent\">Curieux et polyvalent</span>, j’apprends en continu et je cherche à relever des défis qui me permettent de progresser autant techniquement qu’humainement. Que ce soit en front-end, back-end ou sur des outils métiers, je m'efforce toujours de produire un <strong>code propre, maintenable et cohérent</strong>, en favorisant des <span class=\"text-accent text-gradient\">interfaces accessibles</span> et des <span class=\"text-accent text-gradient\">processus collaboratifs</span>."
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Restons en contact",
+    "description": "N'hésitez pas à me contacter pour discuter de vos projets ou pour toute question.",
+    "email": "diego.penicaud@gmail.com",
+    "phone": "+33 7 67 14 99 03",
+    "location": "Toulouse, France",
+    "socials": {
+      "linkedin": "https://www.linkedin.com/in/diego-penicaud-bernal/",
+      "github": "https://github.com/Diego-PB"
+    }
+  },
+  "footer": {
+    "copyright": "&copy; 2024 Mon Portfolio. Tous droits réservés."
+  }
+}

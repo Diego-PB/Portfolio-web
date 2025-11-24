@@ -1,67 +1,180 @@
-// Navigation mobile (si présent sur la page)
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-const navLinks = document.querySelectorAll('.nav-link');
+// Les fonctionnalités de navigation (hamburger, scroll navbar) sont gérées par script.js
+// qui est chargé avant ce fichier.
 
-if (hamburger && navMenu) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
-    });
-}
-
-// Navbar scroll effect
-const navbar = document.getElementById('navbar');
-if (navbar) {
-    window.addEventListener('scroll', () => {
-        if (window.pageYOffset > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-}
 
 // Récupérer l'ID du projet depuis l'URL
 const urlParams = new URLSearchParams(window.location.search);
 const projetId = parseInt(urlParams.get('id'));
 
+async function fetchJSON(path) {
+    const response = await fetch(path);
+    if (!response.ok) {
+        throw new Error(`Impossible de charger ${path} (statut ${response.status})`);
+    }
+    return response.json();
+}
+
 // Charger les projets depuis le JSON
 async function loadProjetDetail() {
     try {
-        const response = await fetch('projets.json');
-        const projets = await response.json();
-        
+        const [projets, competences] = await Promise.all([
+            fetchJSON('projets.json'),
+            fetchJSON('competences.json').catch(error => {
+                console.warn('Impossible de charger competences.json:', error);
+                return null;
+            })
+        ]);
+
         const projet = projets.find(p => p.id === projetId);
-        
+
         if (!projet) {
-            document.getElementById('projet-detail-content').innerHTML = 
+            document.getElementById('projet-detail-content').innerHTML =
                 '<p>Projet non trouvé.</p>';
             return;
         }
-        
-        renderProjetDetail(projet);
+
+        renderProjetDetail(projet, competences);
     } catch (error) {
         console.error('Erreur lors du chargement du projet:', error);
-        document.getElementById('projet-detail-content').innerHTML = 
+        document.getElementById('projet-detail-content').innerHTML =
             '<p>Erreur lors du chargement du projet.</p>';
     }
 }
 
+function normalizeName(name = '') {
+    return name
+        .toString()
+        .trim()
+        .toLowerCase()
+        .replace(/\+/g, 'plus')
+        .replace(/#/g, 'sharp')
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]/g, '');
+}
+
+function buildCompetenceMap(competencesData) {
+    const map = new Map();
+
+    if (!competencesData) {
+        return map;
+    }
+
+    Object.entries(competencesData).forEach(([categorie, items]) => {
+        items.forEach(item => {
+            const key = normalizeName(item.nom);
+            if (!map.has(key)) {
+                map.set(key, { ...item, categorie });
+            }
+        });
+    });
+
+    return map;
+}
+
+function createCompetenceCards(technologies = [], competenceMap) {
+    if (!technologies.length) {
+        return '';
+    }
+
+    return technologies.map(tech => {
+        const competence = competenceMap.get(normalizeName(tech));
+        const displayName = competence?.nom || tech;
+        const categoryLabel = competence?.categorie || 'Compétence projet';
+        const iconHTML = competence?.icon
+            ? `<img src="${competence.icon}" alt="${displayName}" loading="lazy">`
+            : `<span class="projet-competence-letter">${tech.charAt(0).toUpperCase()}</span>`;
+
+        return `
+            <div class="projet-competence-card">
+                <div class="projet-competence-icon">
+                    ${iconHTML}
+                </div>
+                <div class="projet-competence-info">
+                    <span class="competence-name">${displayName}</span>
+                    <span class="competence-category">${categoryLabel}</span>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
+
+function renderCompetenceSection(technologies, competenceMap) {
+    const cards = createCompetenceCards(technologies, competenceMap);
+
+    if (!cards) {
+        return '';
+    }
+
+    return `
+        <div class="projet-detail-section">
+            <h2>Compétences mobilisées</h2>
+            <p class="projet-competence-helper">
+                Ces compétences sont extraites automatiquement de mon référentiel (<code>competences.json</code>).
+            </p>
+            <div class="projet-competences-grid">
+                ${cards}
+            </div>
+        </div>
+    `;
+}
+
+function renderListSection(title, items = []) {
+    if (!items.length) {
+        return '';
+    }
+
+    return `
+        <div class="projet-detail-section">
+            <h2>${title}</h2>
+            <ul class="projet-detail-list">
+                ${items.map(item => `<li>${item}</li>`).join('')}
+            </ul>
+        </div>
+    `;
+}
+
+function renderResultSection(resultats = {}) {
+    const entries = Object.entries(resultats);
+    if (!entries.length) {
+        return '';
+    }
+
+    return `
+        <div class="projet-detail-section">
+            <h2>Impact et résultats</h2>
+            <div class="projet-resultats-grid">
+                ${entries.map(([label, value]) => `
+                    <div class="projet-result-card">
+                        <span class="result-label">${label}</span>
+                        <span class="result-value">${value}</span>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
+
 // Rendre les détails du projet
-function renderProjetDetail(projet) {
+function renderProjetDetail(projet, competencesData) {
     const content = document.getElementById('projet-detail-content');
-    
+    const competenceMap = buildCompetenceMap(competencesData);
+    const competenceSection = renderCompetenceSection(projet.technologies || [], competenceMap);
+    const contexteSection = projet.contexte
+        ? `
+            <div class="projet-detail-section">
+                <h2>Contexte</h2>
+                <p>${projet.contexte}</p>
+            </div>
+        `
+        : '';
+    const objectifsSection = renderListSection('Objectifs clés', projet.objectifs);
+    const responsabilitesSection = renderListSection('Rôle & responsabilités', projet.responsabilites);
+    const featuresSection = renderListSection('Fonctionnalités principales', projet.fonctionnalites);
+    const resultatsSection = renderResultSection(projet.resultats);
+
     // Toutes les images (image principale + autres images)
     const allImages = [projet.mainImg, ...(projet.autreImg || [])];
-    
+
     // Générer le carrousel
     const carouselHTML = `
         <div class="image-carousel">
@@ -84,12 +197,17 @@ function renderProjetDetail(projet) {
             ` : ''}
         </div>
     `;
-    
+
     // Générer les tags de technologies
-    const technologiesHTML = projet.technologies.map(tech => 
-        `<span class="projet-detail-tag">${tech}</span>`
-    ).join('');
-    
+    const technologies = projet.technologies || [];
+    const technologiesHTML = technologies.length
+        ? `
+            <div class="projet-detail-technologies">
+                ${technologies.map(tech => `<span class="projet-detail-tag">${tech}</span>`).join('')}
+            </div>
+        `
+        : '';
+
     // Générer les liens
     const linksHTML = `
         ${projet.lienProjet ? `
@@ -109,10 +227,11 @@ function renderProjetDetail(projet) {
             </a>
         ` : ''}
     `;
-    
+
     content.innerHTML = `
         <div class="projet-detail-header">
             <h1 class="projet-detail-title">${projet.titre}</h1>
+            ${projet.sousTitre ? `<p class="projet-detail-subtitle">${projet.sousTitre}</p>` : ''}
             <p class="projet-detail-desc">${projet.desc}</p>
             <div class="projet-detail-links">
                 ${linksHTML}
@@ -125,13 +244,17 @@ function renderProjetDetail(projet) {
             <div class="projet-detail-section">
                 <h2>À propos du projet</h2>
                 <p>${projet.detail}</p>
-                <div class="projet-detail-technologies">
-                    ${technologiesHTML}
-                </div>
+                ${technologiesHTML}
             </div>
+            ${contexteSection}
+            ${objectifsSection}
+            ${responsabilitesSection}
+            ${featuresSection}
+            ${resultatsSection}
+            ${competenceSection}
         </div>
     `;
-    
+
     // Initialiser le carrousel
     if (allImages.length > 1) {
         initCarousel(allImages);
@@ -146,19 +269,19 @@ let images = [];
 function initCarousel(imageList) {
     images = imageList;
     currentImageIndex = 0;
-    
+
     // Créer les indicateurs
     const indicator = document.getElementById('carousel-indicator');
     if (indicator) {
-        indicator.innerHTML = images.map((_, index) => 
+        indicator.innerHTML = images.map((_, index) =>
             `<div class="carousel-dot ${index === 0 ? 'active' : ''}" onclick="goToImage(${index})"></div>`
         ).join('');
     }
-    
+
     // Créer les miniatures
     const thumbnails = document.getElementById('carousel-thumbnails');
     if (thumbnails) {
-        thumbnails.innerHTML = images.map((img, index) => 
+        thumbnails.innerHTML = images.map((img, index) =>
             `<div class="carousel-thumbnail ${index === 0 ? 'active' : ''}" onclick="goToImage(${index})">
                 <img src="${img}" alt="Miniature ${index + 1}">
             </div>`
@@ -169,32 +292,32 @@ function initCarousel(imageList) {
 // Changer d'image
 function changeImage(direction) {
     currentImageIndex += direction;
-    
+
     if (currentImageIndex < 0) {
         currentImageIndex = images.length - 1;
     } else if (currentImageIndex >= images.length) {
         currentImageIndex = 0;
     }
-    
+
     goToImage(currentImageIndex);
 }
 
 // Aller à une image spécifique
 function goToImage(index) {
     currentImageIndex = index;
-    
+
     // Mettre à jour l'image principale
     const mainImg = document.getElementById('carousel-main-img');
     if (mainImg) {
         mainImg.src = images[currentImageIndex];
     }
-    
+
     // Mettre à jour les indicateurs
     const dots = document.querySelectorAll('.carousel-dot');
     dots.forEach((dot, i) => {
         dot.classList.toggle('active', i === currentImageIndex);
     });
-    
+
     // Mettre à jour les miniatures
     const thumbnails = document.querySelectorAll('.carousel-thumbnail');
     thumbnails.forEach((thumb, i) => {
@@ -217,7 +340,7 @@ document.addEventListener('keydown', (e) => {
 if (projetId) {
     loadProjetDetail();
 } else {
-    document.getElementById('projet-detail-content').innerHTML = 
+    document.getElementById('projet-detail-content').innerHTML =
         '<p>ID de projet manquant.</p>';
 }
 
