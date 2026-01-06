@@ -18,8 +18,8 @@ async function fetchJSON(path) {
 async function loadProjetDetail() {
     try {
         const [projets, competences] = await Promise.all([
-            fetchJSON('projets.json'),
-            fetchJSON('competences.json').catch(error => {
+            fetchJSON('data/projets.json'),
+            fetchJSON('data/competences.json').catch(error => {
                 console.warn('Impossible de charger competences.json:', error);
                 return null;
             })

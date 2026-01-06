@@ -180,7 +180,7 @@ async function loadTimeline() {
     if (!timeline) return;
 
     try {
-        const response = await fetch('parcours.json');
+        const response = await fetch('data/parcours.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -224,7 +224,7 @@ async function loadCompetences() {
     if (!container) return;
 
     try {
-        const response = await fetch('competences.json');
+        const response = await fetch('data/competences.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -278,7 +278,7 @@ async function loadProjets() {
     if (!grid) return;
 
     try {
-        const response = await fetch('projets.json');
+        const response = await fetch('data/projets.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -326,7 +326,7 @@ async function loadProjets() {
 // Charger les données statiques depuis data.json
 async function loadData() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('data/data.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }

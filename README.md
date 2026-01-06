@@ -42,9 +42,9 @@ Vous devez utiliser un serveur local pour que tout fonctionne correctement.
 - `projet-detail.css` - Styles pour la page de détail
 - `script.js` - Script principal
 - `projet-detail.js` - Script pour la page de détail
-- `projets.json` - Liste des projets
-- `competences.json` - Compétences par catégorie
-- `parcours.json` - Parcours scolaire et professionnel
+- `data/projets.json` - Liste des projets
+- `data/competences.json` - Compétences par catégorie
+- `data/parcours.json` - Parcours scolaire et professionnel
 
 ## ✏️ Personnalisation
 

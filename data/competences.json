@@ -25,7 +25,7 @@
     { "nom": "Git", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
     { "nom": "Docker", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
     { "nom": "Vscode", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
-    { "nom": "Vs 2022", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" },
+    { "nom": "Visual Studio", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" },
     { "nom": "Github", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" }
   ],
   "OS": [
