@@ -109,7 +109,7 @@ function renderCompetenceSection(technologies, competenceMap) {
         <div class="projet-detail-section">
             <h2>Compétences mobilisées</h2>
             <p class="projet-competence-helper">
-                Ces compétences sont extraites automatiquement de mon référentiel (<code>competences.json</code>).
+                Voici les compétences developpées durant ce projet
             </p>
             <div class="projet-competences-grid">
                 ${cards}

@@ -3,30 +3,30 @@
     "id": 1,
     "titre": "ParaCheck",
     "sousTitre": "Checklist numérique pour la sécurité en parapente",
-    "desc": "Application Flutter multiplateforme validée par la FFVL pour accompagner les pilotes dans leurs vérifications pré-vol et la prise de décision en situation réelle.",
-    "detail": "ParaCheck est une application mobile conçue pour améliorer la sécurité en parapente. Le projet s’appuie sur un premier prototype papier utilisé par un moniteur pour guider les pilotes. Cette base a été transposée et enrichie dans une version numérique plus moderne et ergonomique avec synchronisation locale des données, scénarios pédagogiques et notifications intelligentes.\n\nL’objectif principal est de proposer un outil fiable, robuste et validé par la Fédération Française de Vol Libre, permettant aux pilotes – débutants comme confirmés – de centraliser toutes les informations essentielles avant de décoller. L’application inclut des checklists pré-vol, des rappels de bonnes pratiques et des modules d’aide à la prise de décision.",
-    "contexte": "Collaboration avec un moniteur FFVL pour transformer un support PDF en application mobile native accessible hors-ligne.",
+    "desc": "Application Flutter multiplateforme pour accompagner les pilotes dans leurs vérifications pré-vol et la prise de décision en situation réelle.",
+    "detail": "ParaCheck est une application mobile conçue pour améliorer la sécurité en parapente. Le projet s'appuie sur un premier prototype papier utilisé par un moniteur pour guider les pilotes. Cette base a été transposée et enrichie dans une version numérique plus moderne et ergonomique avec synchronisation locale des données, scénarios pédagogiques et notifications intelligentes.\n\nL'objectif principal est de proposer un outil fiable, robuste, permettant aux pilotes - débutants comme confirmés - de centraliser toutes les informations essentielles avant de décoller. L'application inclut des checklists pré-vol, des rappels de bonnes pratiques et des modules d'aide à la prise de décision.",
+    "contexte": "Projet de groupe (équipe de 6) dans le cadre d'un projet lors de mon BUT Informatique. Développement d'une solution Open Source validée par un client expert pour remplacer les supports papierts.",
     "objectifs": [
-      "Garantir moins de 2 secondes de temps d’accès aux checklists critiques",
-      "Traduire les scénarios pédagogiques en parcours interactifs",
-      "Préparer l’intégration future de flux météo temps réel"
-    ],
+        "Digitaliser le carnet de vol papier et le rendre accessible hors-ligne",
+        "Implémenter la 'Rose de compétences' pour visualiser la progression",
+        "Assurer la portabilité Web, Android et iOS via Flutter"
+      ],
     "responsabilites": [
-      "Architecture Flutter/Dart",
-      "Design système de checklist dynamique",
-      "Mise en place d’une batterie de tests automatisés"
-    ],
+        "Architecture logicielle et gestion d'état (Repository Pattern)",
+        "Persistance des données locale (Shared Preferences / JSON)",
+        "Génération de rapports PDF natifs (package printing)"
+      ],
     "fonctionnalites": [
-      "Checklist pré-vol personnalisable",
-      "Assistant vocal hors-ligne",
-      "Historique des vols et export PDF"
-    ],
+        "Checklists pré-vol interactives (Méthode MAVIE & Météo personnelle)",
+        "Visualisation graphique des compétences (Radar Chart)",
+        "Historique des vols avec export PDF du carnet officiel"
+      ],
     "resultats": {
-      "utilisateursPilotes": 85,
-      "tauxAdoption": "91% des tests utilisateurs préfèrent ParaCheck au support papier",
-      "status": "Prototype validé et en attente de déploiement public"
-    },
-    "mainImg": "https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1280&q=80",
+        "version": "Release V2 fonctionnelle déployée en Web",
+        "technique": "Couverture de tests unitaires et intégration continue (CI/CD) active",
+        "status": "Solution Open Source prête pour validation par la Fédération (FFVL)"
+      },
+    "mainImg": "img/parachecklogo.png",
     "autreImg": [
       "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
@@ -38,30 +38,173 @@
   },
   {
     "id": 2,
-    "titre": "PulseCare Dashboard",
-    "sousTitre": "Suite web pour le suivi des patients chroniques",
-    "desc": "Plateforme web Vue + Node dédiée aux équipes médicales pour centraliser les données vitales de patients insuffisants cardiaques et automatiser les alertes cliniques.",
-    "detail": "PulseCare est né d’un besoin hospitalier : réduire la charge cognitive des infirmiers qui suivent quotidiennement des patients à domicile. Nous avons conçu une plateforme cloud qui récupère les mesures issues d’objets connectés, les corrèle avec un score de risque et alerte les médecins en cas de dérive.\n\nL’application permet également la planification de téléconsultations, le suivi des traitements, et l’export sécurisé des dossiers. La stack Vue.js + Node/Express offre un front réactif et un backend extensible; PostgreSQL gère les séries temporelles tandis qu’un worker Python applique les règles métier.",
-    "contexte": "Projet réalisé dans le cadre d’un hackathon santé puis industrialisé pour un service de cardiologie.",
+    "titre": "FlopEDT",
+    "sousTitre": "",
+    "desc": "",
+    "detail": "",
+    "contexte": "",
     "objectifs": [
-      "Réduire de 30% le temps de préparation des visioconférences médicales",
-      "Automatiser le scoring patient et la création de tickets d’alerte",
-      "Centraliser la documentation médicale dans un format unifié"
+      "",
+      "",
+      ""
     ],
     "responsabilites": [
-      "Lead front-end Vue 3 + TypeScript",
-      "Conception des API Express sécurisées (JWT + RBAC)",
-      "Déploiement sur Docker Compose + GitHub Actions"
+      "",
+      "",
+      ""
     ],
     "fonctionnalites": [
-      "Tableau de bord temps réel",
-      "Workflow d’alertes médicales",
-      "Module de téléconsultation intégré"
+      "",
+      "",
+      ""
     ],
     "resultats": {
-      "gainTemps": "35% de temps gagné pour la préparation patient",
-      "alertesAutomatisees": 420,
-      "clientsPilotes": 2
+      "a": "",
+      "b": "",
+      "c": ""
+    },
+    "mainImg": "img/flopedtlogo.png",
+    "autreImg": [
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "lienProjet": "https://example.com/pulsecare",
+    "lienCode": "https://github.com/Diego-PB/pulsecare"
+  },
+  {
+    "id": 3,
+    "titre": "DailyBank",
+    "sousTitre": "",
+    "desc": "",
+    "detail": "",
+    "contexte": "",
+    "objectifs": [
+      "",
+      "",
+      ""
+    ],
+    "responsabilites": [
+      "",
+      "",
+      ""
+    ],
+    "fonctionnalites": [
+      "",
+      "",
+      ""
+    ],
+    "resultats": {
+      "a": "",
+      "b": "",
+      "c": ""
+    },
+    "mainImg": "img/dailybanklogo.png",
+    "autreImg": [
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "lienProjet": "https://example.com/pulsecare",
+    "lienCode": "https://github.com/Diego-PB/pulsecare"
+  },
+  {
+    "id": 4,
+    "titre": "Le truc de php docker avec danerleoaidanbastien",
+    "sousTitre": "",
+    "desc": "",
+    "detail": "",
+    "contexte": "",
+    "objectifs": [
+      "",
+      "",
+      ""
+    ],
+    "responsabilites": [
+      "",
+      "",
+      ""
+    ],
+    "fonctionnalites": [
+      "",
+      "",
+      ""
+    ],
+    "resultats": {
+      "a": "",
+      "b": "",
+      "c": ""
+    },
+    "mainImg": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1280&q=80",
+    "autreImg": [
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "lienProjet": "https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-Dashboard_du_departement-Equipe-3A01"
+  }, 
+  {
+    "id": 5,
+    "titre": "Renamify",
+    "sousTitre": "",
+    "desc": "",
+    "detail": "",
+    "contexte": "",
+    "objectifs": [
+      "",
+      "",
+      ""
+    ],
+    "responsabilites": [
+      "",
+      "",
+      ""
+    ],
+    "fonctionnalites": [
+      "",
+      "",
+      ""
+    ],
+    "resultats": {
+      "a": "",
+      "b": "",
+      "c": ""
+    },
+    "mainImg": "img/renamifylogo.png",
+    "autreImg": [
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
+    ],
+    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "lienProjet": "https://example.com/pulsecare",
+    "lienCode": "https://github.com/Diego-PB/pulsecare"
+  },
+  {
+    "id": 6,
+    "titre": "TrackList - En cours",
+    "sousTitre": "",
+    "desc": "",
+    "detail": "",
+    "contexte": "",
+    "objectifs": [
+      "",
+      "",
+      ""
+    ],
+    "responsabilites": [
+      "",
+      "",
+      ""
+    ],
+    "fonctionnalites": [
+      "",
+      "",
+      ""
+    ],
+    "resultats": {
+      "a": "",
+      "b": "",
+      "c": ""
     },
     "mainImg": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1280&q=80",
     "autreImg": [
@@ -73,77 +216,40 @@
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   },
   {
-    "id": 3,
-    "titre": "Factory Twin",
-    "sousTitre": "Jumeau numérique pour lignes d’assemblage",
-    "desc": "Application React + C# .NET capturant les télémétries d’une usine et rejouant la production en 3D pour anticiper les arrêts machine.",
-    "detail": "Factory Twin synchronise les flux SCADA avec une base Neo4j afin de modéliser chaque poste de travail. Un moteur .NET calcule les files d’attente virtuelles et expose des API temps réel consommées par un front React/Three.js pour visualiser l’usine en 3D. Le projet a nécessité une attention particulière aux performances réseau et à la résilience des services.",
-    "contexte": "Mission réalisée pour un équipementier automobile souhaitant diagnostiquer ses goulots d’étranglement.",
+    "id": 7,
+    "titre": "Deadly Roulette",
+    "sousTitre": "Roulette russe en python",
+    "desc": "",
+    "detail": "",
+    "contexte": "",
     "objectifs": [
-      "Simuler les interruptions de chaîne en moins de 5 secondes",
-      "Fournir un tableau de bord de maintenance prédictive",
-      "Partager un export PDF automatique avec les chefs d’atelier"
+      "",
+      "",
+      ""
     ],
     "responsabilites": [
-      "Développement API .NET 7 + SignalR",
-      "Modélisation du graphe de dépendances dans Neo4j",
-      "Intégration Three.js côté React"
+      "",
+      "",
+      ""
     ],
     "fonctionnalites": [
-      "Lecture temps réel des capteurs",
-      "Rejouement 3D interactif",
-      "Rapports PDF automatisés"
+      "",
+      "",
+      ""
     ],
     "resultats": {
-      "reductionArrets": "−18% d’arrêts non planifiés",
-      "tempsAnalyse": "Rapports générés en 45 secondes",
-      "usinesEquipees": 3
+      "a": "",
+      "b": "",
+      "c": ""
     },
-    "mainImg": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1280&q=80",
+    "mainImg": "img/deadlyroulettelogo.jpg",
     "autreImg": [
-      "https://images.unsplash.com/photo-1516117172878-fd2c41f4a759?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1200&q=80"
-    ],
-    "technologies": ["React", "C#", "dotnet", "Neo4j", "Docker"],
-    "lienProjet": "https://example.com/factory-twin",
-    "lienCode": "https://github.com/Diego-PB/factory-twin"
-  },
-  {
-    "id": 4,
-    "titre": "Datafolio",
-    "sousTitre": "Portfolio statique généré depuis GitHub Actions",
-    "desc": "Site statique propulsé par Next.js et un pipeline CI/CD GitHub Actions pour automatiser la génération de pages projet à partir d’un fichier JSON partagé.",
-    "detail": "Datafolio s’adresse aux étudiants et freelances qui souhaitent maintenir un portfolio toujours à jour. Les données des projets sont stockées dans un fichier JSON et dans Airtable; chaque merge déclenche un workflow GitHub Actions qui récupère les données, génère le site (Next.js + Tailwind), puis pousse le bundle sur GitHub Pages. Un dashboard interne permet d’ordonner les projets et d’ajouter des assets.",
-    "contexte": "Projet personnel utilisé comme bac à sable pour expérimenter les pipelines CI/CD et l’automatisation front-end.",
-    "objectifs": [
-      "Publier un nouveau projet en moins de 2 minutes",
-      "Garantir un Lighthouse Performance > 90",
-      "Simplifier la contribution via un seul fichier JSON"
-    ],
-    "responsabilites": [
-      "Architecture Next.js / ISR",
-      "Mise en place de GitHub Actions multi-jobs",
-      "Intégration de tests Playwright"
-    ],
-    "fonctionnalites": [
-      "Génération statique incrémentale",
-      "Formulaire d’ajout de projet relié à Airtable",
-      "Mode sombre synchronisé au système"
-    ],
-    "resultats": {
-      "tempsPublication": "1 min 45 pour publier un projet",
-      "scoreLighthouse": 94,
-      "contributors": 6
-    },
-    "mainImg": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1280&q=80",
-    "autreImg": [
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80",
+      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
-    "technologies": ["React", "TypeScript", "Git", "Github", "Docker", "Vscode"],
-    "lienProjet": "https://example.com/datafolio",
-    "lienCode": "https://github.com/Diego-PB/datafolio"
+    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "lienProjet": "https://example.com/pulsecare",
+    "lienCode": "https://github.com/Diego-PB/pulsecare"
   }
 ]
 
