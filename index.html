@@ -87,8 +87,22 @@
     <section id="competences" class="section competences">
         <div class="container">
             <h2 class="section-title" id="skills-title">Compétences</h2>
-            <div class="competences-categories" id="competences-categories">
-                <!-- Les compétences seront générées dynamiquement depuis le JSON -->
+
+            <!-- Bloc de compétences clés (cartes interactives) -->
+            <div class="core-competences" id="core-competences">
+                <!-- Cartes générées dynamiquement depuis data.json -->
+            </div>
+
+            <!-- Bloc de compétences techniques (accordéons) -->
+            <div class="competences-techniques">
+                <h3 class="competences-techniques-title">Compétences techniques</h3>
+                <p class="competences-techniques-helper">
+                    Langages, frameworks, bases de données et outils que j'utilise au quotidien.
+                    Cliquez sur une catégorie pour afficher le détail.
+                </p>
+                <div class="competences-categories" id="competences-categories">
+                    <!-- Les compétences seront générées dynamiquement depuis le JSON -->
+                </div>
             </div>
         </div>
     </section>
@@ -97,6 +111,10 @@
     <section id="projets" class="section projets">
         <div class="container">
             <h2 class="section-title" id="projects-title">Projets</h2>
+            <div class="projets-filters" id="projets-filters">
+                <!-- Boutons de filtre générés dynamiquement -->
+            </div>
+            <div class="projets-filter-info" id="projets-filter-info"></div>
             <div class="projets-grid" id="projets-grid">
                 <!-- Les projets seront générés dynamiquement depuis le JSON -->
             </div>

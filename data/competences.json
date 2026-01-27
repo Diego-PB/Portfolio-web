@@ -6,7 +6,8 @@
     { "nom": "Python", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
     { "nom": "Php", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
     { "nom": "Bash", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg" },
-    { "nom": "Dart", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" }
+    { "nom": "Dart", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" },
+    { "nom": "Godot", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" }
 
   ],
   "Framework": [

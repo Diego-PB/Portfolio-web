@@ -33,6 +33,7 @@
       "https://images.unsplash.com/photo-1522199992901-9e1e0d0bc1c4?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Flutter", "Dart", "Mobile"],
+    "competences": ["realiser", "optimiser", "gerer", "conduire", "collaborer"],
     "lienProjet": "https://diego-pb.github.io/ParaCheck/",
     "lienCode": "https://github.com/Diego-PB/ParaCheck"
   },
@@ -69,6 +70,7 @@
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "competences": ["realiser", "optimiser", "gerer"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   },
@@ -105,35 +107,36 @@
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "competences": ["realiser", "administrer", "gerer"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   },
   {
     "id": 4,
-    "titre": "Le truc de php docker avec danerleoaidanbastien",
-    "sousTitre": "",
-    "desc": "",
-    "detail": "",
-    "contexte": "",
+    "titre": "Dashboard Dép.Informatique",
+    "sousTitre": "Supervision IoT et analyse d'occupation des salles",
+    "desc": "Application web conteneurisée pour la visualisation temps réel et l'analyse historique des données environnementales du département informatique.",
+    "detail": "Ce projet exploite les données remontées par des capteurs AM107 (présence, CO2, luminosité) via le protocole MQTT. L'application, déployée via Docker, orchestre l'acquisition des données avec Node-RED, leur stockage optimisé dans TimescaleDB et leur restitution via une interface Web. Elle permet aux analystes de données de visualiser l'état des salles sur un plan interactif et d'étudier l'historique d'occupation pour optimiser la gestion des ressources.",
+    "contexte": "Projet de groupe (6 étudiants) en méthode Agile (Scrum). Développement d'une solution complète (Fullstack + IoT) pour répondre aux besoins d'analyse de données du département.",
     "objectifs": [
-      "",
-      "",
-      ""
+      "Centraliser les flux MQTT des capteurs dans une base de données temporelle",
+      "Concevoir une cartographie interactive (SVG) pour la navigation par salle",
+      "Fournir des outils statistiques (graphiques dynamiques) pour l'aide à la décision"
     ],
     "responsabilites": [
-      "",
-      "",
-      ""
+      "Architecture Micro-services (Docker : Nginx, PHP, TimescaleDB, Node-RED)",
+      "Traitement des flux de données IoT et automatisation (Node-RED)",
+      "Développement d'interface de dataviz interactive"
     ],
     "fonctionnalites": [
-      "",
-      "",
-      ""
+      "Plan interactif du bâtiment (SVG) avec état temps réel",
+      "Historique des mesures zoomable et exportable",
+      "Pipeline d'ingestion de données automatisé"
     ],
     "resultats": {
-      "a": "",
-      "b": "",
-      "c": ""
+      "deploiement": "Solution 'Out-of-the-box' entièrement conteneurisée avec Docker",
+      "donnees": "Gestion performante des séries temporelles (TimescaleDB)",
+      "status": "Release 3.0 livrée avec couverture de tests et documentation"
     },
     "mainImg": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1280&q=80",
     "autreImg": [
@@ -141,34 +144,35 @@
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "competences": ["realiser", "optimiser", "administrer", "gerer", "conduire", "collaborer"],
     "lienProjet": "https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-Dashboard_du_departement-Equipe-3A01"
   }, 
   {
     "id": 5,
     "titre": "Renamify",
-    "sousTitre": "",
-    "desc": "",
-    "detail": "",
-    "contexte": "",
+    "sousTitre": "Outil de renommage de fichiers en masse sécurisé",
+    "desc": "Application de bureau Windows (WinForms / .NET 8) pour renommer des lots de fichiers avec prévisualisation et gestion des conflits.",
+    "detail": "Renamify est un utilitaire conçu pour simplifier l'organisation de fichiers. Contrairement à un renommage classique, il regroupe les fichiers par leur 'nom de base' (ex: 'vacances.jpg' et 'vacances.raw' sont liés), permettant de renommer l'ensemble des extensions associées en une seule action. L'application met l'accent sur la sécurité des données : elle simule les opérations pour détecter les collisions avant exécution et intègre un système de 'transaction' permettant d'annuler (Undo) la dernière vague de modifications.",
+    "contexte": "Outil développé sur mesure pour un ami vidéaste dont la caméra génère trois fichiers par prise (WAV, MP4, RAW). L'objectif était d'automatiser le renommage groupé de ces triplets pour diviser par trois son temps d'organisation de rushes.", 
     "objectifs": [
-      "",
-      "",
-      ""
+      "Créer une interface de grille éditable pour mapper rapidement les anciens et nouveaux noms",
+      "Sécuriser le processus via une étape de prévisualisation et de validation des noms",
+      "Implémenter une fonctionnalité 'Undo' pour restaurer l'état précédent en cas d'erreur"
     ],
     "responsabilites": [
-      "",
-      "",
-      ""
+      "Développement C# .NET 8 avec Windows Forms",
+      "Algorithmes de manipulation de fichiers (System.IO) et détection de conflits",
+      "Gestion d'état pour l'historique des opérations (Support du Rollback)"
     ],
     "fonctionnalites": [
-      "",
-      "",
-      ""
+      "Groupement intelligent des fichiers par nom de base",
+      "Détection automatique des doublons et caractères invalides",
+      "Annulation (Undo) de la dernière opération par lot"
     ],
     "resultats": {
-      "a": "",
-      "b": "",
-      "c": ""
+      "technique": "Architecture robuste utilisant des phases de renommage temporaire pour éviter les écrasements",
+      "ux": "Workflow fluide : Sélection dossier -> Scan auto -> Édition -> Application",
+      "status": "Application fonctionnelle livrée sous forme d'exécutable Windows"
     },
     "mainImg": "img/renamifylogo.png",
     "autreImg": [
@@ -176,6 +180,7 @@
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "competences": ["realiser", "optimiser", "gerer", "conduire"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   },
@@ -212,42 +217,44 @@
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "competences": ["realiser", "optimiser", "conduire", "collaborer"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   },
   {
-    "id": 7,
-    "titre": "Deadly Roulette",
-    "sousTitre": "Roulette russe en python",
-    "desc": "",
-    "detail": "",
-    "contexte": "",
-    "objectifs": [
-      "",
-      "",
-      ""
-    ],
-    "responsabilites": [
-      "",
-      "",
-      ""
-    ],
-    "fonctionnalites": [
-      "",
-      "",
-      ""
-    ],
-    "resultats": {
-      "a": "",
-      "b": "",
-      "c": ""
-    },
+  "id": 7,
+  "titre": "Deadly Roulette",
+  "sousTitre": "Jeu de roulette russe CLI avec enjeux Git réels",
+  "desc": "Jeu en ligne de commande (Python) où perdre entraîne l'annulation du dernier commit local. Système de classement communautaire automatisé.",
+  "detail": "Ce projet est un jeu conceptuel 'High Risk, High Reward' pour développeurs. Le principe est simple : une roulette russe simulée en Python. Si le joueur survit, il peut soumettre son score via une Pull Request pour apparaître sur le leaderboard. S'il perd, le script exécute des commandes Git destructrices (ex: git reset --hard) sur son dépôt local. Le projet se distingue par son architecture 'Git-Ops' : le classement n'est pas stocké en base de données mais généré dynamiquement dans le README via un workflow GitHub Actions à chaque nouvelle contribution.",
+  "contexte": "Développement d'un projet 'Toy Project' viral pour expérimenter l'automatisation avancée des workflows GitHub et l'interaction système via Python.",
+  "objectifs": [
+    "Gamifier les interactions avec Git et la ligne de commande",
+    "Mettre en place un système de 'Leaderboard as Code' entièrement automatisé",
+    "Gérer la validation et l'intégration des scores via CI/CD (GitHub Actions)"
+  ],
+  "responsabilites": [
+    "Scripting Python avancé (Génération de fichiers JSON, Appels système)",
+    "Création de Workflows GitHub Actions (Update automatique du README)",
+    "Gestion des contributions Open Source via Pull Requests"
+  ],
+  "fonctionnalites": [
+    "Mode 'Hardcore' interagissant avec l'index Git local",
+    "Génération automatique du tableau des scores (Markdown) via script",
+    "Vérification d'intégrité des fichiers joueurs (JSON) à chaque PR"
+  ],
+  "resultats": {
+    "automation": "100% du leaderboard géré sans intervention humaine (CI/CD)",
+    "concept": "Démonstration ludique de la puissance des hooks et scripts Git",
+    "technique": "Architecture Serverless reposant uniquement sur git et Python"
+  },
     "mainImg": "img/deadlyroulettelogo.jpg",
     "autreImg": [
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "competences": ["realiser", "optimiser", "conduire", "collaborer"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   }

@@ -487,30 +487,224 @@ body {
 }
 
 /* Section Compétences */
+/* Bloc compétences clés (cartes) */
+.core-competences {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    align-items: flex-start; /* chaque carte conserve sa propre hauteur */
+}
+
+.core-competence-card {
+    flex: 0 1 calc(33.333% - 1.5rem);
+    max-width: 380px;
+    background: linear-gradient(145deg, #f9fbff, #f3f4ff);
+    border-radius: 22px;
+    padding: 2.25rem 2rem;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(129, 140, 248, 0.3);
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+
+.core-competence-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.18), transparent 55%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.core-competence-card.active,
+.core-competence-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(15, 23, 42, 0.16);
+    border-color: rgba(59, 130, 246, 0.7);
+    background: linear-gradient(145deg, #ecf2ff, #e0ebff);
+}
+
+.core-competence-card.active::before,
+.core-competence-card:hover::before {
+    opacity: 1;
+}
+
+.core-competence-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.core-competence-icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    background: radial-gradient(circle at 30% 0%, #ffffff, #1d4ed8);
+    box-shadow: 0 16px 30px rgba(37, 99, 235, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.core-competence-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.core-competence-titles h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.core-competence-titles p {
+    font-size: 0.95rem;
+    color: #2563eb;
+    font-weight: 500;
+}
+
+.core-competence-body {
+    margin-top: 1.75rem;
+    border-radius: 16px;
+    padding: 0 0.5rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(4px);
+    transition: max-height 0.3s ease, opacity 0.25s ease, transform 0.25s ease;
+}
+
+.core-competence-card.active .core-competence-body {
+    max-height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.core-competence-body p {
+    font-size: 0.98rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.25rem;
+}
+
+.core-competence-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.75rem 1.65rem;
+    border-radius: 999px;
+    border: none;
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.core-competence-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 36px rgba(37, 99, 235, 0.55);
+    background: linear-gradient(135deg, #1d4ed8, #4338ca);
+}
+
+.core-competence-button span.icon-arrow {
+    display: inline-block;
+    transform: translateY(1px);
+}
+
+.core-competence-button span.icon-arrow svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Bloc compétences techniques (accordéons) */
+.competences-techniques {
+    margin-top: 1rem;
+}
+
+.competences-techniques-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.competences-techniques-helper {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
 .competences-categories {
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 1.25rem;
 }
 
 .competence-category {
     background-color: white;
-    padding: 2rem;
-    border-radius: 12px;
+    border-radius: 14px;
     box-shadow: var(--shadow-md);
     border: 1px solid var(--border-color);
+    overflow: hidden;
+}
+
+.competence-category-header {
+    width: 100%;
+    padding: 1.1rem 1.4rem;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.05), rgba(79, 70, 229, 0.02));
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-family: inherit;
 }
 
 .competence-category-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
     color: var(--text-primary);
-    padding-bottom: 1rem;
-    border-bottom: 2px solid var(--bg-secondary);
+}
+
+.competence-category-toggle-icon {
+    width: 26px;
+    height: 26px;
+    border-radius: 999px;
+    background-color: #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #111827;
+    font-size: 0.8rem;
+    transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.competence-category.open .competence-category-toggle-icon {
+    transform: rotate(90deg);
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+.competence-items-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.competence-category.open .competence-items-wrapper {
+    max-height: 600px;
 }
 
 .competence-items {
+    padding: 1.5rem 1.4rem 1.6rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, max-content));
     gap: 1.5rem;
@@ -599,6 +793,38 @@ body {
 /* Section Projets */
 .projets {
     background-color: var(--bg-secondary);
+}
+
+.projets-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.projets-filter-button {
+    padding: 0.55rem 1.25rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148, 163, 184, 0.8);
+    background-color: #ffffff;
+    color: #4b5563;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.projets-filter-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.12);
+}
+
+.projets-filter-button.active {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    border-color: transparent;
+    color: #ffffff;
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.4);
 }
 
 .projets-grid {
@@ -963,6 +1189,12 @@ body {
 
     .competence-items {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Sur mobile, les cartes de compétences clés passent sur 1 par ligne */
+    .core-competence-card {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }
 

@@ -33,6 +33,50 @@
       "<span class=\"text-accent\">Curieux et polyvalent</span>, j’apprends en continu et je cherche à relever des défis qui me permettent de progresser autant techniquement qu’humainement. Que ce soit en front-end, back-end ou sur des outils métiers, je m'efforce toujours de produire un <strong>code propre, maintenable et cohérent</strong>, en favorisant des <span class=\"text-accent text-gradient\">interfaces accessibles</span> et des <span class=\"text-accent text-gradient\">processus collaboratifs</span>."
     ]
   },
+  "coreCompetences": [
+    {
+      "id": "realiser",
+      "titre": "Réaliser",
+      "sousTitre": "Développement & Conception",
+      "description": "Conception et développement de solutions techniques robustes et adaptées aux besoins métiers.",
+      "icon": "code"
+    },
+    {
+      "id": "optimiser",
+      "titre": "Optimiser",
+      "sousTitre": "Performance & Efficacité",
+      "description": "Proposer des applications informatiques optimisées et efficaces.",
+      "icon": "chart"
+    },
+    {
+      "id": "administrer",
+      "titre": "Administrer",
+      "sousTitre": "Infrastructure & Systèmes",
+      "description": "Gestion, maintenance et optimisation des infrastructures systèmes et réseaux.",
+      "icon": "server"
+    },
+    {
+      "id": "gerer",
+      "titre": "Gérer",
+      "sousTitre": "Données & Pilotage",
+      "description": "Administrer et exploiter les données de l'entreprise pour permettre un bon pilotage de l'activité.",
+      "icon": "data"
+    },
+    {
+      "id": "conduire",
+      "titre": "Conduire",
+      "sousTitre": "Organisation & Coordination",
+      "description": "Piloter un projet informatique avec des méthodes classiques ou agiles.",
+      "icon": "project"
+    },
+    {
+      "id": "collaborer",
+      "titre": "Collaborer",
+      "sousTitre": "Communication & travail d'équipe",
+      "description": "Travailler efficacement dans une équipe informatique.",
+      "icon": "team"
+    }
+  ],
   "contact": {
     "title": "Contact",
     "subtitle": "Restons en contact",
