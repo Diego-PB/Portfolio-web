@@ -28,9 +28,15 @@
       },
     "mainImg": "img/parachecklogo.png",
     "autreImg": [
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1522199992901-9e1e0d0bc1c4?auto=format&fit=crop&w=1200&q=80"
+      "img/paracheck1.png",
+      "img/paracheck3.png",
+      "img/paracheck4.png",
+      "img/paracheck5.png",
+      "img/paracheck6.png",
+      "img/paracheck7.png",
+      "img/paracheck8.png",
+      "img/paracheck9.png",
+      "img/paracheck10.png"
     ],
     "technologies": ["Flutter", "Dart", "Mobile"],
     "competences": ["realiser", "optimiser", "collaborer"],
@@ -66,48 +72,10 @@
     },
     "mainImg": "img/flopedtlogo.png",
     "autreImg": [
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
+
     ],
     "technologies": [ "Vue", "Django"],
     "competences": ["optimiser", "gerer", "conduire"],
-    "lienProjet": "https://example.com/pulsecare",
-    "lienCode": "https://github.com/Diego-PB/pulsecare"
-  },
-  {
-    "id": 3,
-    "titre": "DailyBank",
-    "sousTitre": "",
-    "desc": "",
-    "detail": "",
-    "contexte": "",
-    "objectifs": [
-      "",
-      "",
-      ""
-    ],
-    "responsabilites": [
-      "",
-      "",
-      ""
-    ],
-    "fonctionnalites": [
-      "",
-      "",
-      ""
-    ],
-    "resultats": {
-      "a": "",
-      "b": "",
-      "c": ""
-    },
-    "mainImg": "img/dailybanklogo.png",
-    "autreImg": [
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
-    ],
-    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
-    "competences": ["realiser", "administrer", "gerer"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   },
@@ -140,8 +108,8 @@
     },
     "mainImg": "img/dashboard1.png",
     "autreImg": [
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
+      "img/dashboard2.png",
+        "img/dashboard3.png"
     ],
     "technologies": ["Php", "Docker", "Node-Red", "TimescaleDB", "MQTT"],
     "competences": ["realiser","administrer", "gerer", "conduire", "collaborer"],
@@ -176,13 +144,11 @@
     },
     "mainImg": "img/renamifylogo.png",
     "autreImg": [
-      "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
-      "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
-    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "technologies": ["C#", "WinForms"],
     "competences": ["realiser", "gerer", "conduire"],
-    "lienProjet": "https://example.com/pulsecare",
-    "lienCode": "https://github.com/Diego-PB/pulsecare"
+    "lienProjet": "https://github.com/Diego-PB/Renamify",
+    "lienCode": "https://github.com/Diego-PB/Renamify"
   },
   {
   "id": 6,
@@ -252,10 +218,10 @@
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
-    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "technologies": ["Python"],
     "competences": ["realiser", "collaborer"],
-    "lienProjet": "https://example.com/pulsecare",
-    "lienCode": "https://github.com/Diego-PB/pulsecare"
+    "lienProjet": "https://github.com/Diego-PB/Deadly-Roulette",
+    "lienCode": "https://github.com/Diego-PB/Deadly-Roulette"
   }
 ]
 
