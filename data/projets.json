@@ -33,44 +33,44 @@
       "https://images.unsplash.com/photo-1522199992901-9e1e0d0bc1c4?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Flutter", "Dart", "Mobile"],
-    "competences": ["realiser", "optimiser", "gerer", "conduire", "collaborer"],
+    "competences": ["realiser", "optimiser", "collaborer"],
     "lienProjet": "https://diego-pb.github.io/ParaCheck/",
     "lienCode": "https://github.com/Diego-PB/ParaCheck"
   },
   {
     "id": 2,
     "titre": "FlopEDT",
-    "sousTitre": "",
-    "desc": "",
-    "detail": "",
-    "contexte": "",
+    "sousTitre": "Générateur d'emploi du temps collaboratif et Open Source",
+    "desc": "Solution web (Django/Vue.js) automatisant la création de plannings scolaires et professionnels via une approche coopérative et flexible.",
+    "detail": "FlopEDT (FLexible et OPen source) est une réponse aux casses-têtes de la planification. L'outil permet de générer automatiquement des emplois du temps en tenant compte de contraintes structurelles complexes (salles, groupes, hiérarchie). Il se distingue par son approche coopérative : les utilisateurs ne subissent pas le planning mais participent à son élaboration en définissant leurs propres préférences. Le projet se décline en deux versions adaptées : une pour l'enseignement (Lycées, IUT, Écoles) et une pour la gestion coopérative de plannings salariés.",
+    "contexte": "Développement au sein d'une communauté Open Source pour fournir une alternative éthique, gratuite et performante aux outils de planification propriétaires.",
     "objectifs": [
-      "",
-      "",
-      ""
+      "Automatiser la génération de plannings pour réduire la charge de travail",
+      "Offrir une flexibilité totale paramétrable selon la structure (École ou Entreprise)",
+      "Rendre la conception d'emploi du temps participative via la gestion des préférences"
     ],
     "responsabilites": [
-      "",
-      "",
-      ""
+      "Développement Back-end Python avec Django",
+      "Création d'interfaces utilisateur réactives avec Vue.js",
+      "Implémentation de logiques de contraintes temporelles et spatiales"
     ],
     "fonctionnalites": [
-      "",
-      "",
-      ""
+      "Génération automatique d'emplois du temps sans conflits",
+      "Module de déclaration des préférences et contraintes utilisateurs",
+      "Double mode : Établissement scolaire ou Planning d'équipe coopératif"
     ],
     "resultats": {
-      "a": "",
-      "b": "",
-      "c": ""
+      "licence": "Distribué sous licence libre AGPLv3 (100% gratuit, sans pub)",
+      "flexibilite": "Architecture paramétrable adaptable à tout type d'organigramme",
+      "communaute": "Projet maintenu par une communauté active et ouverte"
     },
     "mainImg": "img/flopedtlogo.png",
     "autreImg": [
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
-    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
-    "competences": ["realiser", "optimiser", "gerer"],
+    "technologies": [ "Vue", "Django"],
+    "competences": ["optimiser", "gerer", "conduire"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   },
@@ -138,13 +138,13 @@
       "donnees": "Gestion performante des séries temporelles (TimescaleDB)",
       "status": "Release 3.0 livrée avec couverture de tests et documentation"
     },
-    "mainImg": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1280&q=80",
+    "mainImg": "img/dashboard1.png",
     "autreImg": [
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
-    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
-    "competences": ["realiser", "optimiser", "administrer", "gerer", "conduire", "collaborer"],
+    "technologies": ["Php", "Docker", "Node-Red", "TimescaleDB", "MQTT"],
+    "competences": ["realiser","administrer", "gerer", "conduire", "collaborer"],
     "lienProjet": "https://github.com/IUT-Blagnac/SAE-ALT-S3-Dev-24-25-Dashboard_du_departement-Equipe-3A01"
   }, 
   {
@@ -180,44 +180,44 @@
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
-    "competences": ["realiser", "optimiser", "gerer", "conduire"],
+    "competences": ["realiser", "gerer", "conduire"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   },
   {
-    "id": 6,
-    "titre": "TrackList - En cours",
-    "sousTitre": "",
-    "desc": "",
-    "detail": "",
-    "contexte": "",
+  "id": 6,
+    "titre": "TrackList",
+    "sousTitre": "Explorateur musical hybride (Mobile & Desktop)",
+    "desc": "Application .NET MAUI Blazor Hybrid permettant l'exploration du catalogue musical Deezer via une interface unique cross-platform (Android, iOS, Windows, Mac).",
+    "detail": "TrackList est une application de démonstration technique exploitant l'architecture Blazor Hybrid. Elle fusionne la puissance native de .NET MAUI avec la flexibilité du développement web (Razor/CSS). L'application consomme l'API publique Deezer pour rechercher des artistes, explorer leurs discographies et lister les pistes audio. Elle se distingue par l'utilisation de la bibliothèque de composants UI **Radzen Blazor** pour offrir une expérience utilisateur riche et réactive.",
+    "contexte": "Développement d'un projet 'Showcase' pour maîtriser l'architecture Hybride .NET (MAUI + Blazor) et l'intégration d'API REST tierces dans un environnement mobile.",
     "objectifs": [
-      "",
-      "",
-      ""
+      "Concevoir une application 'Write Once, Run Anywhere' partageant le code UI entre Mobile et Desktop",
+      "Intégrer une librairie de composants UI professionnelle (Radzen) dans un contexte natif",
+      "Implémenter un client API robuste pour interroger le service Deezer"
     ],
     "responsabilites": [
-      "",
-      "",
-      ""
+      "Architecture de la solution .NET MAUI (Injection de dépendances, Services C#)",
+      "Développement Front-end avec Blazor (Pages Razor, Data Binding)",
+      "Intégration et consommation de l'API Deezer (HttpClient, JSON Serialization)"
     ],
     "fonctionnalites": [
-      "",
-      "",
-      ""
+      "Moteur de recherche d'artistes et de titres via l'API Deezer",
+      "Navigation dans les albums et visualisation des listes de lecture",
+      "Interface adaptative (Responsive) utilisant des composants Radzen (Cards, Stack)"
     ],
     "resultats": {
-      "a": "",
-      "b": "",
-      "c": ""
+      "portabilite": "Code métier et UI partagé entre Android, iOS et Windows",
+      "performance": "Exécution fluide grâce au rendu Blazor natif (pas de WebAssembly)",
+      "technique": "Architecture découplée (Service Pattern) prête pour l'évolution"
     },
-    "mainImg": "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=1280&q=80",
+    "mainImg": "img/vinyl.jpg",
     "autreImg": [
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
-    "competences": ["realiser", "optimiser", "conduire", "collaborer"],
+    "competences": ["realiser"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   },
@@ -254,7 +254,7 @@
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
     "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
-    "competences": ["realiser", "optimiser", "conduire", "collaborer"],
+    "competences": ["realiser", "collaborer"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   }
