@@ -216,10 +216,9 @@
       "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=1200&q=80",
       "https://images.unsplash.com/photo-1525182008055-f88b95ff7980?auto=format&fit=crop&w=1200&q=80"
     ],
-    "technologies": ["Vue", "TypeScript", "Node.js", "Express", "Postgre", "Docker"],
+    "technologies": ["C#", "Blazor", "MAUI", "Deezer API"],
     "competences": ["realiser"],
-    "lienProjet": "https://example.com/pulsecare",
-    "lienCode": "https://github.com/Diego-PB/pulsecare"
+    "lienProjet": "https://github.com/Diego-PB/TrackList"
   },
   {
   "id": 7,

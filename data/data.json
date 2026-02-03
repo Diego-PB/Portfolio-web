@@ -23,7 +23,8 @@
     "description": "Motivé par le développement logiciel et porté par l’envie de créer des solutions fiables, modernes et intuitives.",
     "buttons": {
       "projects": "Voir mes projets",
-      "contact": "Me contacter"
+      "contact": "Me contacter",
+      "cv": "Voir mon CV"
     }
   },
   "about": {

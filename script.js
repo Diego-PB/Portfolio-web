@@ -470,6 +470,9 @@ async function loadData() {
 
             const btnContact = document.getElementById('btn-contact');
             if (btnContact) btnContact.textContent = data.home.buttons.contact;
+
+            const btnCv = document.getElementById('btn-cv');
+            if (btnCv && data.home.buttons.cv) btnCv.textContent = data.home.buttons.cv;
         }
 
         // About
