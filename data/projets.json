@@ -75,7 +75,7 @@
 
     ],
     "technologies": [ "Vue", "Django"],
-    "competences": ["optimiser", "gerer", "conduire"],
+    "competences": ["optimiser", "gerer", "conduire", "collaborer"],
     "lienProjet": "https://example.com/pulsecare",
     "lienCode": "https://github.com/Diego-PB/pulsecare"
   },
